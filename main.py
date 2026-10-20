@@ -152,6 +152,7 @@ for p in ax1.patches:
                  ha="center", va="center", xytext=(0, 5),
                  textcoords="offset points", fontsize=9, fontweight="bold")
 plt.tight_layout()
+plt.savefig("figures/figure1_target_risk_distribution.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 feature_cols = [c for c in num_cols if c not in [
@@ -174,6 +175,7 @@ for i, v in enumerate(missing_series):
         ax2.text(v + 0.1, i, f"{v} ({v/len(df)*100:.1f}%)",
                  va="center", fontsize=9, fontweight="bold")
 plt.tight_layout()
+plt.savefig("figures/figure2_missingness_profile.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 plt.figure(figsize=(8, 5))
@@ -192,6 +194,7 @@ plt.title("Figure 3: Rural Water Supply Reliability (%) Across Risk Classes",
 plt.xlabel("Target Risk Class", fontsize=10, fontweight="bold")
 plt.ylabel("Rural Population Reliable Supply (%)", fontsize=10, fontweight="bold")
 plt.tight_layout()
+plt.savefig("figures/figure3_rural_reliability_by_risk.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 df["Urban_Ratio"] = (df["Urban Population"] / df["Population"]) * 100
@@ -212,6 +215,7 @@ plt.title("Figure 4: Municipal Urbanisation Ratio (%) Across Risk Classes",
 plt.xlabel("Target Risk Class", fontsize=10, fontweight="bold")
 plt.ylabel("Urban Population Ratio (%)", fontsize=10, fontweight="bold")
 plt.tight_layout()
+plt.savefig("figures/figure4_urbanisation_ratio_by_risk.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 top5 = df.nlargest(5, "% Population Reliable Supply")
@@ -229,6 +233,7 @@ plt.xlabel("Population Reliable Supply (%)", fontsize=10, fontweight="bold")
 plt.ylabel("Water Services Authority (WSA)", fontsize=10, fontweight="bold")
 plt.legend(title="Risk Class", loc="lower right")
 plt.tight_layout()
+plt.savefig("figures/figure5_extreme_disparities.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 ## * 2.3 Split data before learning transformations. Justify train/validation/test or nested cross-validation design, including stratification/group/time constraints. Reserve the test set for final evaluation only.
@@ -595,6 +600,7 @@ axes[5].set_ylabel('True Positive Rate', fontsize=10)
 axes[5].legend(loc='lower right', fontsize=8)
 
 plt.tight_layout()
+plt.savefig("figures/confusion_matrices_and_roc_curves.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 # Overfitting Diagnosis and Generalization Gap Analysis
@@ -693,6 +699,7 @@ autolabel(rects2)
 autolabel(rects3)
 
 plt.tight_layout()
+plt.savefig("figures/overfitting_diagnosis_barchart.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 ## * 4.4 Test for overfitting using train-versus-validation performance and learning curves; for neural models  also show training/validation loss and metric curves. Diagnose gaps and discuss early stopping,  dropout, weight decay, pruning or other controls used.
@@ -821,6 +828,7 @@ ax2.set_title('Learning Curves: Dataset Size vs Macro Recall',
 ax2.legend(loc='lower right', fontsize=9)
 
 plt.tight_layout()
+plt.savefig("figures/neural_epoch_loss_and_learning_curves.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 # ^ QUESTION 5
