@@ -1,3 +1,6 @@
+# GIT REPOSITORY LINK
+https://github.com/igris-marvin/data_science_project_repo
+
 # Water Supply Reliability Risk Predictor
 
 This project provides a machine learning–powered Streamlit web application that predicts the risk level of water supply reliability for South African Water Services Authorities (WSAs).  
@@ -33,6 +36,12 @@ Open CMD in the root folder in vscode
 
 ### 1. Environment Setup
 ```bash
+
+# setup python environment
+python -m venv .venv
+
+# install relevant dependencies
+pip install <>
 
 # Activate (PowerShell) - this activates and runs the python virtual enviroment
 .venv\Scripts\Activate.ps1
@@ -85,3 +94,4 @@ Urban Population with access cannot exceed Urban Population.”
 The dataset csv was edited to remove double space into single space in 2 columns to avoid errors during runtime like exact names 
 
 
+Team Contribution Statement Declaration 

@@ -1,5 +1,5 @@
 # app.py
-# IDA117V - Water Supply Reliability Risk Predictor
+# Water Supply Reliability Risk Predictor
  
 import joblib
 import numpy as np
